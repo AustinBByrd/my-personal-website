@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 body {
     background: #121212;
     font-family: "Courier New", monospace;
@@ -6,15 +10,25 @@ body {
     line-height: 1; 
     color: #aaa8a8;
   }
+  .button-container {
+    text-align: center;
+  }
   .start-mowing {
-    background-color: #fdfdfd; 
+    background-color: #fdfdfd;
   }
   .forward {
     background-color: #166a01;
   }
   .stop {
     background-color: #ff0000;
+    
   }
   .reverse {
     background-color: #166a01;
+  }
+  #mower {
+    position: absolute;
+    left: 0;
+    top: 200; /* You may adjust the top position as needed */
+    transition: left 0.5s ease;
   }
