@@ -6,3 +6,15 @@ body {
     line-height: 1; 
     color: #aaa8a8;
   }
+  .start-mowing {
+    background-color: #fdfdfd; 
+  }
+  .forward {
+    background-color: #166a01;
+  }
+  .stop {
+    background-color: #ff0000;
+  }
+  .reverse {
+    background-color: #166a01;
+  }
