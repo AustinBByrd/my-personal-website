@@ -10,7 +10,7 @@ body {
     line-height: 1; 
     color: #aaa8a8;
     width: 1500px
-    
+
 
   }
   .button-container {
@@ -41,4 +41,18 @@ body {
     top: 108px; 
     transition: left 0.5s ease;
   }
- 
+  #container {
+    position: relative;
+  }
+  
+  /* Style for the text line */
+  .text-line {
+    position:fixed;
+    top: 400px; /* Adjust this value to control the vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */ 
+    color: #aaa8a8; /* Text color */
+    padding: 10px; /* Padding around the text */
+    font-size: 35px; /* Font size */
+    font-weight: bold; /* Bold text */
+  }

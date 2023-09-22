@@ -6,6 +6,7 @@ const buttonsoundstop = document.querySelectorAll(".stop");
 const buttonforward = document.querySelectorAll(".forward")
 const buttonreverse = document.querySelectorAll(".reverse")
 const mower = document.getElementById("mower");
+const container = document.getElementById("container");
 let moveMowerInterval;
 let mowerPosition = 0;
 
@@ -23,13 +24,17 @@ buttonforward.forEach(buttonforward => {
     
         
         moveMowerInterval = setInterval(() => {
-            mowerPosition += 1;
+            mowerPosition += 10;
             mower.style.left = mowerPosition + "px";
         
         if (mowerPosition >= 1400) {
             
             clearInterval(moveMowerInterval);
             audio.pause();
+            const textElement = document.createElement("div");
+            textElement.textContent = "Thanks for mowing the grass!";
+            textElement.classList.add("text-line"); 
+            container.appendChild(textElement);
         }
     
     }, 10);
