@@ -24,7 +24,7 @@ buttonforward.forEach(buttonforward => {
     
         
         moveMowerInterval = setInterval(() => {
-            mowerPosition += 10;
+            mowerPosition += 2;
             mower.style.left = mowerPosition + "px";
         
         if (mowerPosition >= 1400) {
