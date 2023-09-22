@@ -9,6 +9,9 @@ body {
     font-weight: 200;
     line-height: 1; 
     color: #aaa8a8;
+    width: 1500px
+    
+
   }
   .button-container {
     text-align: center;
@@ -26,9 +29,16 @@ body {
   .reverse {
     background-color: #166a01;
   }
+  #grass {
+    align-content: center;
+    position: absolute;
+    left: 0;
+    top: 200px; 
+  }
   #mower {
     position: absolute;
     left: 0;
-    top: 200; /* You may adjust the top position as needed */
+    top: 108px; 
     transition: left 0.5s ease;
   }
+ 

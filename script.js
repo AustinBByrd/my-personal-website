@@ -20,14 +20,16 @@ buttonsoundstart.forEach(buttonsoundstart => {
 
 buttonforward.forEach(buttonforward => {
     buttonforward.addEventListener("click", () => {
-        let mowerPosition = 0;
+    
+        
         moveMowerInterval = setInterval(() => {
-            mowerPosition += .25;
+            mowerPosition += 1;
             mower.style.left = mowerPosition + "px";
-        if (mowerPosition >= 800) {
+        
+        if (mowerPosition >= 1400) {
             
             clearInterval(moveMowerInterval);
-           
+            audio.pause();
         }
     
     }, 10);
@@ -46,15 +48,19 @@ buttonsoundstop.forEach(buttonsoundstop => {
 
 buttonreverse.forEach(buttonreverse => {
     buttonreverse.addEventListener("click", () => {
+  
+       
         moveMowerInterval = setInterval(() => {
-            mowerPosition -= .05;
+            mowerPosition -= .5;
             mower.style.left = mowerPosition + "px";
-        if (mowerPosition >= 0) {
             
-            clearInterval(moveMowerInterval);
-           
-        }
-    
+            if (mowerPosition <= 0) {
+                
+                clearInterval(moveMowerInterval);
+                audio.pause();
+               
+            }
+   
     }, 10);
     
 });
