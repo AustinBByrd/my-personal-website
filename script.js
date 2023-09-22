@@ -16,13 +16,14 @@ buttonsoundstart.forEach(buttonsoundstart => {
     audio.volume = 0.2;
     audio.play();
     audio.loop=true;
+    isAudioPlaying = true;
   });
 });
 
 buttonforward.forEach(buttonforward => {
     buttonforward.addEventListener("click", () => {
     
-        
+      if (isAudioPlaying) {  
         moveMowerInterval = setInterval(() => {
             mowerPosition += 2;
             mower.style.left = mowerPosition + "px";
@@ -36,14 +37,15 @@ buttonforward.forEach(buttonforward => {
             textElement.classList.add("text-line"); 
             container.appendChild(textElement);
         }
-    
+        
     }, 10);
-    
+}
 });
 
 buttonsoundstop.forEach(buttonsoundstop => {
     buttonsoundstop.addEventListener("click", () => {
       audio.pause();
+      isAudioPlaying = false;
       clearInterval(moveMowerInterval);
         
     });
@@ -54,7 +56,7 @@ buttonsoundstop.forEach(buttonsoundstop => {
 buttonreverse.forEach(buttonreverse => {
     buttonreverse.addEventListener("click", () => {
   
-       
+    if (isAudioPlaying) {  
         moveMowerInterval = setInterval(() => {
             mowerPosition -= .5;
             mower.style.left = mowerPosition + "px";
@@ -67,7 +69,7 @@ buttonreverse.forEach(buttonreverse => {
             }
    
     }, 10);
-    
+}  
 });
 
 
