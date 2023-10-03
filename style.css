@@ -45,14 +45,14 @@ body {
     position: relative;
   }
   
-  /* Style for the text line */
+  
   .text-line {
     position:fixed;
-    top: 400px; /* Adjust this value to control the vertical position */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */ 
-    color: #aaa8a8; /* Text color */
-    padding: 10px; /* Padding around the text */
-    font-size: 35px; /* Font size */
-    font-weight: bold; /* Bold text */
+    top: 400px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #aaa8a8; 
+    padding: 10px; 
+    font-size: 35px; 
+    font-weight: bold; 
   }
